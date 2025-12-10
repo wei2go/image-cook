@@ -1,0 +1,46 @@
+# References and docs
+/references
+/docs
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+.next/
+out/
+build/
+
+# Testing
+coverage/
+.nyc_output
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.emulator
+*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Firebase
+.firebase/
+*.log
+firebase-debug.log
+firebase-debug.*.log
+.runtimeconfig.json
+
+# Turbo
+.turbo/

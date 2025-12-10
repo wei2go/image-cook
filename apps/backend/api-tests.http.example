@@ -1,0 +1,40 @@
+### Backend API Tests
+### Use with REST Client extension in VS Code or IntelliJ
+### Copy this file to api-tests.http and update the values
+
+@baseUrl = http://localhost:8531
+@category = enemy
+
+### Health Check
+GET {{baseUrl}}/health
+
+### Get all entities
+GET {{baseUrl}}/entities
+
+### Get entities by category
+GET {{baseUrl}}/entities?category={{category}}
+
+### Initialize entities from storage
+### Note: Update the path to your enemies-init.json file
+POST {{baseUrl}}/entities/init
+Content-Type: application/json
+
+< ../../data/enemies-init.json
+
+### Approve an image
+POST {{baseUrl}}/images/approve
+Content-Type: application/json
+
+{
+  "entityId": "ancient-robot",
+  "model": "flux",
+  "version": 1
+}
+
+### Deselect an image
+POST {{baseUrl}}/images/deselect
+Content-Type: application/json
+
+{
+  "entityId": "ancient-robot"
+}

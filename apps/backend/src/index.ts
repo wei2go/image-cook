@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import { app } from './app';
 import { initialiseFirebaseAdmin } from './config/firebase';
 
@@ -7,4 +8,6 @@ initialiseFirebaseAdmin();
 
 app.listen(PORT, () => {
   console.log(`Backend running on http://localhost:${PORT}`);
+  console.log(`Firebase bucket: ${process.env.FIREBASE_STORAGE_BUCKET}`);
+  console.log(`Firestore database ID: ${process.env.FIRESTORE_DATABASE_ID}`);
 });

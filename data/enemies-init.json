@@ -1,0 +1,110 @@
+{
+  "category": "enemy",
+  "entities": [
+    {
+      "id": 1,
+      "name": "Bouncy Bug",
+      "description": "A super springy bee who loves to bounce between flowers — and sometimes right into trouble!"
+    },
+    {
+      "id": 2,
+      "name": "Flicker Dot",
+      "description": "A glowing orb that sparkles and darts around quickly, leaving trails of shimmer behind."
+    },
+    {
+      "id": 3,
+      "name": "Zigzag Zap",
+      "description": "A cheeky bolt of lightning with way too much energy. He zips around unpredictably!"
+    },
+    {
+      "id": 4,
+      "name": "Sleepy Blip",
+      "description": "A drowsy jelly blob who floats through battles half-asleep… but watch out when he yawns!"
+    },
+    {
+      "id": 5,
+      "name": "Snappy Snap",
+      "description": "A quick-snipping crab who loves clapping his claws to a rhythm only he can hear."
+    },
+    {
+      "id": 6,
+      "name": "Dizzy Whirl",
+      "description": "A spinning top creature who twirls so fast, it's hard to tell where it'll stop!"
+    },
+    {
+      "id": 7,
+      "name": "Peeky Boo",
+      "description": "A curious mouse who loves hide and seek — always peeking, never still."
+    },
+    {
+      "id": 8,
+      "name": "Shadow Swoop",
+      "description": "A mysterious bird who glides low in silence. You never see him coming… until it's too late."
+    },
+    {
+      "id": 9,
+      "name": "Puzzle Pup",
+      "description": "A clever pup with colour-changing spots — solving puzzles is its favourite game!"
+    },
+    {
+      "id": 10,
+      "name": "Mix-Up Mouse",
+      "description": "This tiny wizard mouse casts harmless little spells — but they always go a bit sideways."
+    },
+    {
+      "id": 11,
+      "name": "Copy Cat",
+      "description": "A sneaky twin-tailed cat who duplicates itself to confuse challengers."
+    },
+    {
+      "id": 12,
+      "name": "Mega Glitch",
+      "description": "A blocky bug from the digital world who stutters, flickers, and breaks the rules of reality."
+    },
+    {
+      "id": 13,
+      "name": "Lava Serpent",
+      "description": "A writhing snake of molten rock. Slithers through the ground, leaving glowing cracks in its path."
+    },
+    {
+      "id": 14,
+      "name": "Ancient Robot",
+      "description": "Awakened after a thousand years, this heavy bronze guardian stomps forward with crushing strength and stubborn defence."
+    },
+    {
+      "id": 15,
+      "name": "Galactic Beast",
+      "description": "A strange creature made of stars and space dust. It doesn't roar — it echoes through your mind."
+    },
+    {
+      "id": 16,
+      "name": "Psychic Eye",
+      "description": "Hovering, blinking, pulsing — this all-seeing eye zaps enemies with waves of thought."
+    },
+    {
+      "id": 17,
+      "name": "Thorn Colossus",
+      "description": "A living rock-armour brute with thorny fists and bark-thick skin. It defends ancient forests and doesn't like uninvited guests."
+    },
+    {
+      "id": 18,
+      "name": "Thunder Lion",
+      "description": "With a mane of lightning and paws that spark, this roaring lion commands storms and charges into battle like thunder itself."
+    },
+    {
+      "id": 19,
+      "name": "Crystal Dragon",
+      "description": "A dazzling dragon made entirely of crystal shards. Its body sparkles — but its breath can freeze anything in a flash!"
+    },
+    {
+      "id": 20,
+      "name": "Slime King",
+      "description": "This jiggly ruler may look adorable, but it's got bouncy resilience and commands an army of tiny slimes."
+    },
+    {
+      "id": 21,
+      "name": "Shadow Overlord",
+      "description": "A swirling dark phantom from the edge of the void. Whispers in the dark are his weapon — and he's always watching."
+    }
+  ]
+}

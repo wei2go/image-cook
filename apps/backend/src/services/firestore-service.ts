@@ -3,6 +3,11 @@ import { EntityTrackingDoc } from "@image-cook/shared";
 
 export class FirestoreService {
   private get db() {
+    // If using a named database (not default), pass the database ID
+    const databaseId = process.env.FIRESTORE_DATABASE_ID;
+    if (databaseId) {
+      return getFirestore(databaseId);
+    }
     return getFirestore();
   }
 

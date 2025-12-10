@@ -51,6 +51,7 @@ export function EntityList() {
       await deselectImage(entityId);
       await refresh();
     } catch (err) {
+      console.error("Failed to deselect image", err);
       alert("Failed to deselect");
     } finally {
       setIsProcessing(false);
@@ -73,6 +74,7 @@ export function EntityList() {
       setPendingSelections(new Map());
       await refresh();
     } catch (err) {
+      console.error("Some selections failed", err);
       alert("Some selections failed");
     } finally {
       setIsProcessing(false);

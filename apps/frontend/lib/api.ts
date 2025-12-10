@@ -1,7 +1,5 @@
 import type { EntityTrackingDoc } from "@image-cook/shared";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8531";
-
 /**
  * Get the API base URL depending on the environment
  * - Server-side: uses API_BASE_URL from env

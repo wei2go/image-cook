@@ -128,7 +128,10 @@ export function EntityList() {
         <div className="max-w-7xl mx-auto px-4 py-6">
           <h1 className="text-3xl font-bold text-gray-900">Image Cook</h1>
           <p className="mt-2 text-sm text-gray-600">
-            Select your favorite entity images • Total: {entities.length} •
+            Select your favourite image for each enemy and confirm them all at once. You can still change your mind later by reviewing all variations.
+          </p>
+          <p className="mt-2 text-sm text-gray-600">
+            Total: {entities.length} •
             Selected: {selectionsCount}
           </p>
         </div>

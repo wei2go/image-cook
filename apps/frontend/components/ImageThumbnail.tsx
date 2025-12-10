@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 interface Props {
   image: { url: string; model: string; version: number };
   isPendingSelected: boolean;
@@ -16,10 +18,12 @@ export function ImageThumbnail({ image, isPendingSelected, isSavedSelected, onCl
       onClick={onClick}
     >
       <div className="relative w-full aspect-square bg-gray-100">
-        <img
+        <Image
           src={image.url}
           alt={`${image.model}-v${image.version}`}
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
+          sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 300px"
         />
       </div>
 

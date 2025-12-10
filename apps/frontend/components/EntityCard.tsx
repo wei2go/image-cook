@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import type { EntityTrackingDoc, GeneratedImage } from '@image-cook/shared';
 import { ImageThumbnail } from './ImageThumbnail';
 
@@ -33,11 +34,15 @@ export function EntityCard({ entity, pendingSelection, onToggleSelect, onDeselec
       {/* Collapsed: show winner */}
       {hasSelection && !isExpanded && entity.selectedImage && (
         <div className="mt-3">
-          <img
-            src={entity.selectedImage.url}
-            alt={entity.name}
-            className="w-32 h-32 object-cover rounded-lg border-2 border-green-500"
-          />
+          <div className="relative w-32 h-32 rounded-lg border-2 border-green-500 overflow-hidden">
+            <Image
+              src={`${entity.selectedImage.url}${entity.selectedImage.url.includes('?') ? '&' : '?'}cb=${entity.id}-${entity.selectedImage.model}-${entity.selectedImage.version}`}
+              alt={entity.name}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100px, 128px"
+            />
+          </div>
           <button
             onClick={() => setIsExpanded(true)}
             className="mt-2 text-sm text-blue-600 hover:text-blue-800 underline"

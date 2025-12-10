@@ -15,7 +15,11 @@ export function EntityList() {
     return entities.filter(e => e.selectedImage).length + pendingSelections.size;
   }, [entities, pendingSelections]);
 
-  const handleToggleSelect = (entityId: string, model: string, version: number) => {
+  const handleToggleSelect = (entityId: string, model: string, version: number, hasSelection: boolean) => {
+    if(hasSelection) {
+        return; // Doesn't allow users to toggle selection if already has selection in DB. Users can click "Select Again" to do so.
+    }
+
     setPendingSelections(prev => {
       const newMap = new Map(prev);
       const existing = newMap.get(entityId);
@@ -125,13 +129,14 @@ export function EntityList() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {entities.map(entity => {
             const pending = pendingSelections.get(entity.id);
+            const hasSelection = !!entity.selectedImage;
 
             return (
               <EntityCard
                 key={entity.id}
                 entity={entity}
                 pendingSelection={pending}
-                onToggleSelect={(model, version) => handleToggleSelect(entity.id, model, version)}
+                onToggleSelect={(model, version) => handleToggleSelect(entity.id, model, version, hasSelection)}
                 onDeselect={() => handleDeselect(entity.id)}
               />
             );

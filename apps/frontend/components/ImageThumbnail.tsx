@@ -1,15 +1,17 @@
 interface Props {
   image: { url: string; model: string; version: number };
-  isSelected: boolean;
+  isPendingSelected: boolean;
+  isSavedSelected: boolean;
   onClick: () => void;
 }
 
-export function ImageThumbnail({ image, isSelected, onClick }: Props) {
+export function ImageThumbnail({ image, isPendingSelected, isSavedSelected, onClick }: Props) {
   return (
     <div
       className={`
         relative cursor-pointer rounded-lg overflow-hidden border-2 transition-all
-        ${isSelected ? 'border-blue-500 ring-2 ring-blue-300' : 'border-gray-300 hover:border-gray-400'}
+        ${isPendingSelected ? 'border-blue-500 ring-2 ring-blue-300' : 'border-gray-300 hover:border-gray-400'}
+        ${isSavedSelected ? 'border-red-500 ring-2 ring-red-300' : 'border-gray-300 hover:border-gray-400'}
       `}
       onClick={onClick}
     >
@@ -27,8 +29,8 @@ export function ImageThumbnail({ image, isSelected, onClick }: Props) {
       </div>
 
       {/* Selection checkmark */}
-      {isSelected && (
-        <div className="absolute top-2 right-2 bg-blue-500 rounded-full p-1">
+      {(isPendingSelected || isSavedSelected) && (
+        <div className={`absolute top-2 right-2 rounded-full p-1 ${isPendingSelected ? 'bg-blue-500' : 'bg-red-500'}`}>
           <svg
             className="w-4 h-4 text-white"
             fill="none"

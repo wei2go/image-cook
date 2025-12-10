@@ -16,7 +16,7 @@ export function EntityCard({ entity, pendingSelection, onToggleSelect, onDeselec
   const hasSelection = !!entity.selectedImage;
 
   return (
-    <div className="border border-gray-300 rounded-lg p-4 bg-white shadow-sm" data-testid="entity-card">
+    <div className={`border border-gray-300 rounded-lg p-4 bg-white shadow-sm`} data-testid="entity-card">
       {/* Header */}
       <div className="flex items-start justify-between mb-3">
         <div className="flex-1">
@@ -68,13 +68,13 @@ export function EntityCard({ entity, pendingSelection, onToggleSelect, onDeselec
               const isSavedSelected =
                 entity.selectedImage?.model === img.model &&
                 entity.selectedImage?.version === img.version;
-              const isSelected = isPendingSelected || isSavedSelected;
 
               return (
                 <ImageThumbnail
                   key={`${img.model}-v${img.version}`}
                   image={img}
-                  isSelected={isSelected}
+                  isPendingSelected={isPendingSelected}
+                  isSavedSelected={isSavedSelected}
                   onClick={() => onToggleSelect(img.model, img.version)}
                 />
               );

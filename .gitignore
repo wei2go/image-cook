@@ -46,3 +46,7 @@ firebase-service-account.json
 
 # Turbo
 .turbo/
+
+# Playwright
+playwright-report/
+test-results/

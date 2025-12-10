@@ -6,7 +6,8 @@
     "dev": "next dev --port 8530 --turbopack",
     "build": "next build",
     "start": "next start --port 8530",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@image-cook/shared": "*",
@@ -15,6 +16,7 @@
     "react-dom": "19.2.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.48.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^24",
     "@types/react": "^19",

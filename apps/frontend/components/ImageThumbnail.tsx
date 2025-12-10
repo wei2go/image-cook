@@ -10,6 +10,7 @@ interface Props {
 export function ImageThumbnail({ image, isPendingSelected, isSavedSelected, onClick }: Props) {
   return (
     <div
+      data-testid="image-thumbnail"
       className={`
         relative cursor-pointer rounded-lg overflow-hidden border-2 transition-all
         ${isPendingSelected ? 'border-blue-500 ring-2 ring-blue-300' : 'border-gray-300 hover:border-gray-400'}

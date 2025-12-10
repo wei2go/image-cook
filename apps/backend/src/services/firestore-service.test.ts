@@ -1,5 +1,3 @@
-import { describe, it } from '@jest/globals';
-
 describe('FirestoreService', () => {
   describe('createEntity', () => {
     it.todo('should create entity in Firestore');

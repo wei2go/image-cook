@@ -1,5 +1,3 @@
-import { describe, it } from '@jest/globals';
-
 describe('Images Routes', () => {
   describe('POST /images/approve', () => {
     it.todo('should approve image and return selectedImage');

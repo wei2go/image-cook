@@ -1,5 +1,3 @@
-import { describe, it } from '@jest/globals';
-
 describe('Storage Manager', () => {
   describe('uploadWinnerImage', () => {
     it.todo('should upload compressed image to winners/ folder');

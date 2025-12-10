@@ -1,5 +1,3 @@
-import { describe, it } from '@jest/globals';
-
 describe('Selection Service', () => {
   describe('approveImage', () => {
     it.todo('should download generated image');

@@ -8,6 +8,6 @@ initialiseFirebaseAdmin();
 
 app.listen(PORT, () => {
   console.log(`Backend running on http://localhost:${PORT}`);
-  console.log(`Firebase bucket: ${process.env.FIREBASE_STORAGE_BUCKET}`);
+  console.log(`Firebase bucket: ${process.env.STORAGE_BUCKET}`);
   console.log(`Firestore database ID: ${process.env.FIRESTORE_DATABASE_ID}`);
 });

@@ -41,6 +41,8 @@ Thumbs.db
 firebase-debug.log
 firebase-debug.*.log
 .runtimeconfig.json
+firebase-service-account.json
+*-service-account.json
 
 # Turbo
 .turbo/

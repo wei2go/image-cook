@@ -1,6 +1,6 @@
-import 'dotenv/config';
-import { app } from './app';
-import { initialiseFirebaseAdmin } from './config/firebase';
+import "dotenv/config";
+import { app } from "./app";
+import { initialiseFirebaseAdmin } from "./config/firebase";
 
 const PORT = process.env.PORT || 8531;
 

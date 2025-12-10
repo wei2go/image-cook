@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { fetchEntities } from '../lib/api';
-import type { EntityTrackingDoc } from '@image-cook/shared';
+import { useState, useEffect } from "react";
+import { fetchEntities } from "../lib/api";
+import type { EntityTrackingDoc } from "@image-cook/shared";
 
 export function useEntities(category?: string) {
   const [entities, setEntities] = useState<EntityTrackingDoc[]>([]);

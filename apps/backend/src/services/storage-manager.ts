@@ -23,7 +23,7 @@ export async function getSignedUrl(storagePath: string): Promise<string> {
   const file = bucket.file(storagePath);
 
   const [url] = await file.getSignedUrl({
-    action: 'read',
+    action: "read",
     expires: Date.now() + 7 * 24 * 60 * 60 * 1000, // 7 days
   });
 
@@ -46,7 +46,7 @@ export async function makeFilePublic(storagePath: string): Promise<void> {
 export async function uploadWinnerImage(
   buffer: Buffer,
   entityName: string,
-  category: string
+  category: string,
 ): Promise<UploadResult> {
   const normalisedName = normaliseEntityName(entityName);
   const fileName = `${normalisedName}.jpg`;
@@ -106,5 +106,5 @@ export async function downloadFile(storagePath: string): Promise<Buffer> {
 export async function listFiles(prefix: string): Promise<string[]> {
   const bucket = getStorage().bucket();
   const [files] = await bucket.getFiles({ prefix });
-  return files.map(file => file.name);
+  return files.map((file) => file.name);
 }

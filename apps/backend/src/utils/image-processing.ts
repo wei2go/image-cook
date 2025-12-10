@@ -17,7 +17,7 @@ const DEFAULT_OPTIONS: CompressImageOptions = {
  */
 export async function compressImageToJpeg(
   buffer: Buffer,
-  options: Partial<CompressImageOptions> = {}
+  options: Partial<CompressImageOptions> = {},
 ): Promise<Buffer> {
   const { width, height, quality } = { ...DEFAULT_OPTIONS, ...options };
 

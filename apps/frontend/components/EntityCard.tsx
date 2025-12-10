@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Image from 'next/image';
-import type { EntityTrackingDoc, GeneratedImage } from '@image-cook/shared';
-import { ImageThumbnail } from './ImageThumbnail';
+import { useState } from "react";
+import Image from "next/image";
+import type { EntityTrackingDoc, GeneratedImage } from "@image-cook/shared";
+import { ImageThumbnail } from "./ImageThumbnail";
 
 interface Props {
   entity: EntityTrackingDoc;
@@ -12,12 +12,20 @@ interface Props {
   onDeselect: () => void;
 }
 
-export function EntityCard({ entity, pendingSelection, onToggleSelect, onDeselect }: Props) {
+export function EntityCard({
+  entity,
+  pendingSelection,
+  onToggleSelect,
+  onDeselect,
+}: Props) {
   const [isExpanded, setIsExpanded] = useState(!entity.selectedImage);
   const hasSelection = !!entity.selectedImage;
 
   return (
-    <div className={`border border-gray-300 rounded-lg p-4 bg-white shadow-sm`} data-testid="entity-card">
+    <div
+      className={`border border-gray-300 rounded-lg p-4 bg-white shadow-sm`}
+      data-testid="entity-card"
+    >
       {/* Header */}
       <div className="flex items-start justify-between mb-3">
         <div className="flex-1">
@@ -36,7 +44,7 @@ export function EntityCard({ entity, pendingSelection, onToggleSelect, onDeselec
         <div className="mt-3">
           <div className="relative w-32 h-32 rounded-lg border-2 border-green-500 overflow-hidden">
             <Image
-              src={`${entity.selectedImage.url}${entity.selectedImage.url.includes('?') ? '&' : '?'}cb=${entity.id}-${entity.selectedImage.model}-${entity.selectedImage.version}`}
+              src={`${entity.selectedImage.url}${entity.selectedImage.url.includes("?") ? "&" : "?"}cb=${entity.id}-${entity.selectedImage.model}-${entity.selectedImage.version}`}
               alt={entity.name}
               fill
               className="object-cover"

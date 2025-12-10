@@ -1,7 +1,8 @@
 import { initializeApp, getApps } from "firebase-admin/app";
 
 // Default Storage bucket for the project
-export const DEFAULT_BUCKET = process.env.FIREBASE_STORAGE_BUCKET || "image-cook.firebasestorage.app";
+export const DEFAULT_BUCKET =
+  process.env.FIREBASE_STORAGE_BUCKET || "image-cook.firebasestorage.app";
 
 // Initialise Firebase Admin SDK
 export function initialiseFirebaseAdmin() {
@@ -11,6 +12,6 @@ export function initialiseFirebaseAdmin() {
     initializeApp({
       storageBucket: DEFAULT_BUCKET,
     });
-    console.log('Firebase initialized with bucket:', DEFAULT_BUCKET);
+    console.log("Firebase initialized with bucket:", DEFAULT_BUCKET);
   }
 }

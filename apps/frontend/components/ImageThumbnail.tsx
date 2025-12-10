@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 interface Props {
   image: { url: string; model: string; version: number };
@@ -7,14 +7,19 @@ interface Props {
   onClick: () => void;
 }
 
-export function ImageThumbnail({ image, isPendingSelected, isSavedSelected, onClick }: Props) {
+export function ImageThumbnail({
+  image,
+  isPendingSelected,
+  isSavedSelected,
+  onClick,
+}: Props) {
   return (
     <div
       data-testid="image-thumbnail"
       className={`
         relative cursor-pointer rounded-lg overflow-hidden border-2 transition-all
-        ${isPendingSelected ? 'border-blue-500 ring-2 ring-blue-300' : 'border-gray-300 hover:border-gray-400'}
-        ${isSavedSelected ? 'border-red-500 ring-2 ring-red-300' : 'border-gray-300 hover:border-gray-400'}
+        ${isPendingSelected ? "border-blue-500 ring-2 ring-blue-300" : "border-gray-300 hover:border-gray-400"}
+        ${isSavedSelected ? "border-red-500 ring-2 ring-red-300" : "border-gray-300 hover:border-gray-400"}
       `}
       onClick={onClick}
     >
@@ -35,7 +40,9 @@ export function ImageThumbnail({ image, isPendingSelected, isSavedSelected, onCl
 
       {/* Selection checkmark */}
       {(isPendingSelected || isSavedSelected) && (
-        <div className={`absolute top-2 right-2 rounded-full p-1 ${isPendingSelected ? 'bg-blue-500' : 'bg-red-500'}`}>
+        <div
+          className={`absolute top-2 right-2 rounded-full p-1 ${isPendingSelected ? "bg-blue-500" : "bg-red-500"}`}
+        >
           <svg
             className="w-4 h-4 text-white"
             fill="none"

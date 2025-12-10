@@ -1,4 +1,4 @@
-import { EntityList } from '../components/EntityList';
+import { EntityList } from "../components/EntityList";
 
 export default function Home() {
   return (
